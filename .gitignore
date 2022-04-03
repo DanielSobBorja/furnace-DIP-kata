@@ -1,0 +1,30 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Maven
+target/
+
+# Gradle
+build.gradle
+build-spring-boot.gradle
+gradlew
+gradlew.bat
+
+# IDE
+.classpath
+.project
+/bin/
+.idea
+
+# VSCode
+.vscode
+
+# Library
+.settings/
+.sts4-cache/
