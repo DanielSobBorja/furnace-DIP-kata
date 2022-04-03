@@ -7,7 +7,7 @@ import edu.poniperro.types.RoomTemperature;
 public class Jedi implements Heater {
 
     public void engage(RoomTemperature temperature){
-        temperature.incrementTemperature(this.toucheLightSable());
+        RoomTemperature.incrementTemperature(this.toucheLightSable());
     }
     public void disengage(RoomTemperature temperature){
         Heater heater = new GasHeater();
@@ -15,12 +15,11 @@ public class Jedi implements Heater {
     }
 
     private double toucheLightSable(){
-        final double lightSableTemperature = 1400; // in ºC
-        return lightSableTemperature;
+        return 1400;
     }
 
     private void forcePersuasion(Heater heater, RoomTemperature temperature){
-        temperature.incrementTemperature(-1400);
+        RoomTemperature.incrementTemperature(-1400);
         heater.disengage(temperature);
     }
 

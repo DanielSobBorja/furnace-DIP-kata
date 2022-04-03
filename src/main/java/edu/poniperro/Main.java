@@ -13,7 +13,7 @@ public class Main {
         final double minTemp = 15.0;
         final double maxTemp = 21.0;
 
-        RoomTemperature temperature = new RoomTemperature(15);
+        RoomTemperature temperature = RoomTemperature.setRoomTemperature(15);
         Heater heater = new GasHeater();
         Thermometer thermometer = new RemoteCommandSensor();
 
