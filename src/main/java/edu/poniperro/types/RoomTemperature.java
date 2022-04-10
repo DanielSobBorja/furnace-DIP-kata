@@ -5,17 +5,14 @@ public class RoomTemperature {
 
     private static RoomTemperature roomTemperature;
 
-    public static RoomTemperature setRoomTemperature(double temperature) {
+    public static RoomTemperature getInstance() {
         if (roomTemperature == null) {
-            roomTemperature = new RoomTemperature(temperature);
-        } else {
-            roomTemperature.setTemperature(temperature);
+            roomTemperature = new RoomTemperature();
         }
         return roomTemperature;
     }
 
-    public RoomTemperature(double temperature){
-        RoomTemperature.temperature = temperature;
+    private RoomTemperature(){
     }
 
     public static double getTemperature() {
@@ -23,7 +20,7 @@ public class RoomTemperature {
     }
 
     public void setTemperature(double temperature) {
-        RoomTemperature.temperature = temperature;
+        this.temperature = temperature;
     }
 
     public static void incrementTemperature(double increment){
