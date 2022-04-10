@@ -2,6 +2,7 @@ package edu.poniperro.weird;
 
 import edu.poniperro.hardware.GasHeater;
 import edu.poniperro.interfaces.Heater;
+import edu.poniperro.types.Color;
 import edu.poniperro.types.RoomTemperature;
 
 public class Jedi implements Heater {
@@ -24,12 +25,12 @@ public class Jedi implements Heater {
     }
 
     public void speak(){
-        System.out.println("\n"
+        System.out.println("\n" + Color.GREEN
                 + "\t  __.-._   \n"
                 + "\t  '-._\"7' \n"
                 + "\t   /'.-c   \n"
                 + "\t   |  /T   \n"
-                + "\t  _)_/LI   \n"
+                + "\t  _)_/LI   \n" + Color.RESET
                 + "\nDo or do not. There is no try ");
     }
 }

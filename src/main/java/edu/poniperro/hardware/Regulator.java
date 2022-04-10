@@ -2,6 +2,7 @@ package edu.poniperro.hardware;
 
 import edu.poniperro.interfaces.Heater;
 import edu.poniperro.interfaces.Thermometer;
+import edu.poniperro.types.Color;
 import edu.poniperro.types.RegulatorDisplayCodes;
 import edu.poniperro.types.RoomTemperature;
 
@@ -23,10 +24,10 @@ public class Regulator {
     private void message(RegulatorDisplayCodes code, RoomTemperature temperature) {
         switch (code) {
             case HEATING:
-                System.out.println("Calentando => temperatura " + temperature.getTemperature());
+                System.out.println(Color.RED + "Calentando =>" + Color.RESET + temperature.getTemperature() + " C");
                 break;
             case WAITING:
-                System.out.println("Apagado => temperatura " + temperature.getTemperature());
+                System.out.println(Color.BLUE + "Apagado =>" + Color.RESET + temperature.getTemperature() + " C");
                 break;
             default:
                 System.out.println("Algo raro sucede...");
